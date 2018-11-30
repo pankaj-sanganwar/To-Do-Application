@@ -1,0 +1,84 @@
+<html>
+
+<body style="width: 100%">
+	<table style="width: 75%;">
+		<tr>
+			<td>
+				<label>To Do</label>
+			</td>
+			<td>
+				<input type="text" name="todo" id="todo">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Categories</label>
+			</td>
+			<td>
+				<input type="checkbox" name="category" value="Java"> Java
+				<input type="checkbox" name="category" value="JavaScript"> JavaScript
+				<input type="checkbox" name="category" value="Jquery"> Jquery
+				<input type="checkbox" name="category" value="Angular"> Angular
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Status</label>
+			</td>
+			<td>
+				<select id="status">
+					<option>New</option>
+					<option>In Progres</option>
+					<option>Completed</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Date</label>
+			</td>
+			<td>
+				<input type="date" id="date">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Is Reminder</label>
+			</td>
+			<td>
+				<input type="checkbox" id="is_reminder" onclick="setReminderDate()">
+			</td>
+		</tr>
+		<tr style="display: none;" id="reminder_date">
+			<td>
+				<label>Reminder Date</label>
+			</td>
+			<td>
+				<input type="date" id="date_reminder">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="Save" onclick="addToDo()">
+			</td>
+			<td>
+				<input type="button" value="Cancel" onclick="cancel()">
+			</td>
+		</tr>
+	</table>
+	<script src="user_actions.js"></script>
+</body>
+
+</html>
+
+<!-- 
+	- Date : calendar
+    - Categories : check boxes
+    - Mark as done :
+    - isReminder: whether todo item has reminder alert,
+        and if yes then reminder date selection using calendar
+    - Reminder Date
+    - isPublic : radio button
+    - Attach images/upload : file upload
+    - Make use of various form elements
+ -->

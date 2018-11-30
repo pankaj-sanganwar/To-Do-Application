@@ -1,0 +1,36 @@
+<html>
+
+<body style="width: 100%;">
+	<div>
+		<input type="button" value="ToDo List" onclick="cancel()">&nbsp;&nbsp;&nbsp;
+		<input type="button" value="Profile" onclick="editprofile()">&nbsp;&nbsp;&nbsp;
+		<input type="button" value="Log Out" onclick="logOut()">&nbsp;&nbsp;&nbsp;
+	</div>
+	<br><br><br><br>
+	<input type="button" style="float: right; margin-right: 50px" value="Add Todo" onclick="addEditToDoPage()">
+	<br><br><br><br>
+	<input type="text" placeholder="Search By Category" onkeyup="searchToDo()" id="filter">
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<select id="status">
+		<option value="New">New</option>
+		<option value="In Progres">In Progres</option>
+		<option value="Completed">Completed</option>
+	</select>
+	<br><br>
+	<table id="todo" border="2" style="width: 80%; border: 2px">
+		<tr>
+			<th><input type="button" value="Bulk Delete" onclick="bulkDelete()"></th>
+			<th>Todo</th>
+			<th>Goal Date</th>
+			<th>Category</th>
+			<th>Status</th>
+			<th>Action</th>
+		</tr>
+	</table>
+	<script src="user_actions.js"></script>
+	<script>
+		loadToDoList();
+	</script>
+</body>
+
+</html>
